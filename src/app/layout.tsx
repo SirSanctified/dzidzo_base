@@ -22,7 +22,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`font-sans ${inter.variable} bg-background dark:bg-background-dark`}>
-        <ContainerLayout>{children}</ContainerLayout>
+        <ContainerLayout>
+          <div className="rounded-xl w-full h-full">
+          {children}
+          </div>
+          </ContainerLayout>
         </body>
     </html>
   );

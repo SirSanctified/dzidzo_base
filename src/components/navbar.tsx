@@ -135,7 +135,7 @@ export function ContainerLayout({ children }: { children: React.ReactNode }) {
         </div>
       </div>
       <div className="flex flex-col rounded-xl">
-        <header className="flex h-14 items-center bg-accent rounded-b-xl -ml-1 gap-4 border-b bg-muted/40 px-4 lg:h-[60px] lg:px-6">
+        <header className="flex h-14 items-center bg-accent rounded-b-xl gap-4 border-b px-4 lg:h-[60px] lg:px-6 sticky top-0 left-0 z-10">
           <Sheet>
             <SheetTrigger asChild>
               <Button
@@ -147,13 +147,13 @@ export function ContainerLayout({ children }: { children: React.ReactNode }) {
                 <span className="sr-only">Toggle navigation menu</span>
               </Button>
             </SheetTrigger>
-            <SheetContent side="left" className="flex flex-col bg-accent">
+            <SheetContent side="left" className="flex flex-col bg-accent overflow-y-scroll">
               <nav className="grid gap-2 text-lg font-medium">
                 <Link
                   href="#"
                   className="flex items-center gap-2 text-lg font-semibold"
                 >
-                  <Image src="/logo-icon.svg" alt="DzidzoBase" width={150} height={32} />
+                  <Image src="/logo-icon.svg" alt="DzidzoBase" width={32} height={32} />
                   <span className="text-green-900 font-bold text-2xl">DzidzoBase</span>
                 </Link>
                 <Link
@@ -261,13 +261,13 @@ export function ContainerLayout({ children }: { children: React.ReactNode }) {
             <DropdownMenuTrigger asChild>
               <Button variant="secondary" size="icon" className="rounded-full relative">
                 <MessageSquare className="h-5 w-5" />
-                <Badge className=" flex bg-transperant hover:bg-transperant p-0 text-red-600 shrink-0 items-center justify-center rounded-full absolute top-0 right-1">
+                <Badge className=" flex bg-transperant hover:bg-transperant p-0 text-red-600 shrink-0 items-center justify-center rounded-full absolute top-1 right-1">
                   1
                 </Badge>
                 <span className="sr-only">Open Message notifications</span>
               </Button>
             </DropdownMenuTrigger>
-            <DropdownMenuContent align="end">
+            <DropdownMenuContent align="end" className="max-w-[100vw] sm:max-w-[400px]">
               <DropdownMenuLabel>Messages</DropdownMenuLabel>
               <DropdownMenuSeparator />
               <DropdownMenuItem className="px-4 mt-2 py-2 border rounded-xl rounded-bl-none mx-1 w-full">
@@ -284,13 +284,13 @@ export function ContainerLayout({ children }: { children: React.ReactNode }) {
             <DropdownMenuTrigger asChild>
               <Button variant="secondary" size="icon" className="rounded-full relative">
                 <Bell className="h-5 w-5" />
-                <Badge className=" flex bg-transperant hover:bg-transperant p-0 text-red-600 shrink-0 items-center justify-center rounded-full absolute top-0 right-1">
+                <Badge className=" flex bg-transperant hover:bg-transperant p-0 text-red-600 shrink-0 items-center justify-center rounded-full absolute top-1 right-1">
                   6
                 </Badge>
                 <span className="sr-only">Toggle notifications</span>
               </Button>
             </DropdownMenuTrigger>
-            <DropdownMenuContent align="end">
+            <DropdownMenuContent align="end" className="max-w-[100vw] sm:max-w-[400px]">
               <DropdownMenuLabel>Notifications</DropdownMenuLabel>
               <DropdownMenuSeparator />
               <DropdownMenuItem className="px-4 mt-2 py-2 border rounded-xl rounded-bl-none mx-1 w-full">
