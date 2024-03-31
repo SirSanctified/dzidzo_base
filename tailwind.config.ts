@@ -18,6 +18,22 @@ const config = {
       },
     },
     extend: {
+      colors: {
+        background: {
+          DEFAULT: "#e9ddc9",
+          dark: "#1a202c",
+        },
+        primary: {
+          DEFAULT: "#3d5237",
+        },
+        secondary: {
+          DEFAULT: "#8dc45f",
+        },
+        accent: {
+          DEFAULT: "#88654a",
+          beige: "#e9ddc9",
+        },
+      },
       keyframes: {
         "accordion-down": {
           from: { height: "0" },
